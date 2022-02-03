@@ -11,8 +11,8 @@ const HeaderButton = () => {
     setPosition('notHeader');
   };
   const buttonVariants = {
-    header: { margin: '0rem' },
-    notHeader: { margin: '0.5rem' },
+    header: {},
+    notHeader: {},
   };
   const flexVariants = {
     header: { scale: '0.5' },
@@ -26,7 +26,7 @@ const HeaderButton = () => {
         animate={position}
         variants={flexVariants}
       >
-        <Link to="/about">
+        <Link to="about">
           <motion.button
             style={{ backgroundColor: '#535FD4' }}
             variants={buttonVariants}
@@ -35,7 +35,7 @@ const HeaderButton = () => {
             about
           </motion.button>
         </Link>
-        <Link to="/works">
+        <Link to="works">
           <motion.button
             style={{ backgroundColor: '#E6DF47' }}
             variants={buttonVariants}
@@ -44,7 +44,7 @@ const HeaderButton = () => {
             works
           </motion.button>
         </Link>
-        <Link to="/contact">
+        <Link to="contact">
           <motion.button
             style={{ backgroundColor: '#80D459' }}
             variants={buttonVariants}
