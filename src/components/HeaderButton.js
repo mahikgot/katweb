@@ -6,13 +6,16 @@ const HeaderButton = () => {
   const onClickAbout = () => {
     setPosition('header');
   };
+  const onClickWorks = () => {
+    setPosition('notHeader');
+  };
   const buttonVariants = {
     header: { margin: '0rem' },
     notHeader: { margin: '0.5rem' },
   };
   const flexVariants = {
-    header: {},
-    notHeader: {},
+    header: { scale: '0.5' },
+    notHeader: { scale: '1' },
   };
   return (
     <div className="rightHome">
@@ -32,6 +35,7 @@ const HeaderButton = () => {
         <motion.button
           style={{ backgroundColor: '#E6DF47' }}
           variants={buttonVariants}
+          onClick={onClickWorks}
         >
           works
         </motion.button>
