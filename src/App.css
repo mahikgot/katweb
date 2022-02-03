@@ -55,7 +55,7 @@ button {
   font-size: 1.5rem;
   cursor: pointer;
   padding: 1rem 1.5rem;
-  margin: auto 0.5rem;
+  transition: margin 0.5s;
 }
 
 p {
