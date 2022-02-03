@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HeaderButton = () => {
   const [position, setPosition] = useState('notHeader');
@@ -25,26 +26,32 @@ const HeaderButton = () => {
         animate={position}
         variants={flexVariants}
       >
-        <motion.button
-          style={{ backgroundColor: '#535FD4' }}
-          variants={buttonVariants}
-          onClick={onClickAbout}
-        >
-          about
-        </motion.button>
-        <motion.button
-          style={{ backgroundColor: '#E6DF47' }}
-          variants={buttonVariants}
-          onClick={onClickWorks}
-        >
-          works
-        </motion.button>
-        <motion.button
-          style={{ backgroundColor: '#80D459' }}
-          variants={buttonVariants}
-        >
-          contact
-        </motion.button>
+        <Link to="/about">
+          <motion.button
+            style={{ backgroundColor: '#535FD4' }}
+            variants={buttonVariants}
+            onClick={onClickAbout}
+          >
+            about
+          </motion.button>
+        </Link>
+        <Link to="/works">
+          <motion.button
+            style={{ backgroundColor: '#E6DF47' }}
+            variants={buttonVariants}
+            onClick={onClickWorks}
+          >
+            works
+          </motion.button>
+        </Link>
+        <Link to="/contact">
+          <motion.button
+            style={{ backgroundColor: '#80D459' }}
+            variants={buttonVariants}
+          >
+            contact
+          </motion.button>
+        </Link>
       </motion.div>
     </div>
   );
