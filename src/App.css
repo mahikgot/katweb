@@ -20,10 +20,10 @@
 }
 
 .leftHome {
-  flex: 0 0 30%;
+  flex: 0 1 30%;
 }
 .rightHome {
-  flex: 0 0 50%;
+  flex: 0 1 50%;
 }
 
 
@@ -42,8 +42,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
 }
 
 button {
@@ -66,7 +66,7 @@ p {
   text-align: left;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1190px) {
   .leftHome, .rightHome {
     flex: 100%;
   }

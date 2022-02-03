@@ -11,8 +11,8 @@ const HeaderButton = () => {
     notHeader: { margin: '0.5rem' },
   };
   const flexVariants = {
-    header: { alignItems: 'flex-end' },
-    notHeader: { alignItems: 'center' },
+    header: {},
+    notHeader: {},
   };
   return (
     <div className="rightHome">
