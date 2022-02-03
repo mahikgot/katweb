@@ -1,22 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const HeaderButton = () => {
-  const loc = useLocation().pathname;
+const HeaderButton = ({ anim }) => {
+  HeaderButton.propTypes = {
+    anim: PropTypes.string.isRequired,
+  };
   const flexVariants = {
     header: { scale: 0.5 },
     notHeader: { scale: 1 },
   };
-  const setAnimate = (pathname) => {
-    if (pathname === '/') return 'notHeader';
-    return 'header';
-  };
+
   return (
     <div className="rightHome">
       <motion.div
         className="flexContainerButtonHome"
-        animate={setAnimate(loc)}
+        animate={anim}
         variants={flexVariants}
       >
         <Link to="about">
