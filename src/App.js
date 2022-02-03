@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Home from './components/Home';
 import './App.css';
 
-const App = () => {
-
-  return (
-    <>
-    </>
-  );
-}
+const App = () => (
+  <div className="overlay">
+    <Home />
+  </div>
+);
 export default App;

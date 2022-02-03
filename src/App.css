@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+.overlay {
+    position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.flexContainerHome {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: center;
+}
+
+.leftHome {
+  flex: 0 0 30%;
+}
+.rightHome {
+  flex: 0 0 50%;
+}
+
+
+.nameHome {
+  font-weight: 900;
+  font-size: 4rem;
+  color: #F285AC;
+  text-align: left;
+  line-height: 1rem;
+}
+
+
+.flexContainerButtonHome {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+button {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  font-family:'Inconsolata', monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+  color: #474747;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .leftHome, .rightHome {
+    flex: 100%;
+  }
+}
