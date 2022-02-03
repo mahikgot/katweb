@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import HeaderButton from './HeaderButton';
 
 const Header = () => (
@@ -12,6 +13,7 @@ const Header = () => (
       </p>
     </div>
     <HeaderButton />
+    <Outlet />
   </div>
 );
 export default Header;

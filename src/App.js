@@ -6,7 +6,10 @@ import './App.css';
 const App = () => (
   <div className="overlay">
     <Routes>
-      <Route path="/" element={<Header />} />
+      <Route path="/" element={<Header />}>
+        <Route path="works" element="tanga" />
+        <Route path="about" element="about" />
+      </Route>
     </Routes>
   </div>
 );
