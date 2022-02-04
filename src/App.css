@@ -1,40 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+html {
   background-color: #f7f7f7;
 }
-.flexContainerHome {
-  position: absolute;
-  top: 35%;
-  left: 10%;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+.overlay {
+  display: grid;
+  background-color: #f7f7f7;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 90vh;
 }
 
 .leftHome {
-  flex: 0 0 30%;
+  margin: auto;
 }
+
 .rightHome {
-  flex: 0 1 auto;
+  margin: auto;
 }
-
-
+.rightHome[header='header'] {
+  grid-row: 1;
+  grid-column: 2;
+}
+.Home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.Home[header='header'] {
+  grid-template-columns: 1fr 10rem;
+  grid-template-rows: 10rem 1fr;
+}
 .nameHome {
   font-family:'Inconsolata', monospace;
   font-weight: bolder;
-  font-size: 5rem;
   color: #F285AC;
   text-align: left;
   line-height: 5rem;
   text-shadow: -1px 1px, 1px 1px;
+  font-size: 5rem;
 }
 
 
@@ -65,26 +67,4 @@ p {
   letter-spacing: 0.15rem;
   color: #474747;
   text-align: left;
-}
-
-@media (max-width: 900px) {
-  .leftHome, .rightHome {
-    flex: 100%;
-  }
-  .nameHome {
-    font-family:'Inconsolata', monospace;
-    font-weight: bolder;
-    font-size: 5rem;
-    color: #F285AC;
-    text-align: center;
-    line-height: 1rem;
-    text-shadow: -1px 1px, 1px 1px;
-  }
-  p {
-    font-family:'Inconsolata', monospace;
-    font-size: 1.5rem;
-    letter-spacing: 0.15rem;
-    color: #474747;
-    text-align: center;
-  }
 }

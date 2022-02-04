@@ -7,8 +7,8 @@ const App = () => (
   <div className="overlay">
     <Routes>
       <Route path="/" element={<Header />}>
-        <Route path="works" element="tanga" />
-        <Route path="about" element="about" />
+        <Route path="works" />
+        <Route path="about" />
       </Route>
     </Routes>
   </div>

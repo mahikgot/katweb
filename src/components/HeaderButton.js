@@ -8,12 +8,17 @@ const HeaderButton = ({ anim }) => {
     anim: PropTypes.string.isRequired,
   };
   const flexVariants = {
-    header: { scale: 0.5 },
-    notHeader: { scale: 1 },
+    header: { scale: 0.6 },
+    notHeader: { scale: 0.9 },
   };
 
   return (
-    <div className="rightHome">
+    <motion.div
+      layout
+      className="rightHome"
+      header={anim}
+    >
+
       <motion.div
         className="flexContainerButtonHome"
         animate={anim}
@@ -41,7 +46,7 @@ const HeaderButton = ({ anim }) => {
           </motion.button>
         </Link>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
