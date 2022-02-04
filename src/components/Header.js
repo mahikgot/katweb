@@ -15,20 +15,22 @@ const Header = () => {
   return (
     <div
       className="Home"
-      isHeader={isHeader}
+      isheader={isHeader}
     >
 
       <motion.div
         className="leftHome"
         animate={isHeader}
       >
-        <Nameplate isHeader={isHeader} />
+        <Nameplate
+          isHeader={isHeader}
+        />
       </motion.div>
 
       <motion.div
         layout
         className="rightHome"
-        isHeader={isHeader}
+        isheader={isHeader}
       >
         <HeaderButton
           isHeader={isHeader}

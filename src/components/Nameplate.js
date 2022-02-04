@@ -15,7 +15,7 @@ const Nameplate = ({ isHeader }) => {
       >
         Kat, 22
       </h1>
-      <p>
+      <p className="descHome">
         Heavily influenced by 2014 Tumblr and a shameless enjoyer of most mainstream things
       </p>
     </>

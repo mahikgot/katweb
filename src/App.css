@@ -7,7 +7,7 @@ html {
 .overlay {
   display: grid;
   background-color: #f7f7f7;
-  max-width: 1170px;
+  max-width: 80%;
   margin: 0 auto;
   height: 90vh;
 }
@@ -16,21 +16,22 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.Home[isHeader='header'] {
+.Home[isheader='header'] {
   grid-template-columns: 1fr 10rem;
-  grid-template-rows: 10rem 1fr;
 }
 
 .leftHome {
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 75%;
 }
 
 .rightHome {
   margin: auto;
 }
-.rightHome[isHeader='header'] {
-  grid-row: 1;
+.rightHome[isheader='header'] {
   grid-column: 2;
+  margin: 0;
 }
 
 .nameHome {
@@ -41,8 +42,15 @@ html {
   line-height: 5rem;
   text-shadow: -1px 1px, 1px 1px;
   font-size: 5rem;
+  grid-column: 2;
 }
 
+.descHome {
+  grid-column: 2;
+  max-width: 80%;
+  position: relative;
+  bottom: 4rem;
+}
 .flexContainerButtonHome {
   display: flex;
   flex-direction: column;
