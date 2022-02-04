@@ -9,7 +9,7 @@ const Nameplate = ({ isHeader }) => {
     return null;
   }
   return (
-    <>
+    <div className="leftHomeItem">
       <h1
         className="nameHome"
       >
@@ -18,7 +18,7 @@ const Nameplate = ({ isHeader }) => {
       <p className="descHome">
         Heavily influenced by 2014 Tumblr and a shameless enjoyer of most mainstream things
       </p>
-    </>
+    </div>
   );
 };
 export default Nameplate;

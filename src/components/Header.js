@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Outlet, useLocation } from 'react-router-dom';
 import HeaderButton from './HeaderButton';
 import Nameplate from './Nameplate';
+import Logo from './Logo';
 
 const Header = () => {
   const loc = useLocation().pathname;
@@ -26,10 +27,12 @@ const Header = () => {
           isHeader={isHeader}
         />
       </motion.div>
-
+      <Logo
+        isHeader={isHeader}
+      />
       <motion.div
         layout
-        className="rightHome"
+        className="navButtons"
         isheader={isHeader}
       >
         <HeaderButton
