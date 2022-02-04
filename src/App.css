@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
 html {
   background-color: #f7f7f7;
 }
+
 .overlay {
   display: grid;
   background-color: #f7f7f7;
   max-width: 1170px;
   margin: 0 auto;
   height: 90vh;
+}
+
+.Home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.Home[isHeader='header'] {
+  grid-template-columns: 1fr 10rem;
+  grid-template-rows: 10rem 1fr;
 }
 
 .leftHome {
@@ -17,18 +28,11 @@ html {
 .rightHome {
   margin: auto;
 }
-.rightHome[header='header'] {
+.rightHome[isHeader='header'] {
   grid-row: 1;
   grid-column: 2;
 }
-.Home {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.Home[header='header'] {
-  grid-template-columns: 1fr 10rem;
-  grid-template-rows: 10rem 1fr;
-}
+
 .nameHome {
   font-family:'Inconsolata', monospace;
   font-weight: bolder;
@@ -38,7 +42,6 @@ html {
   text-shadow: -1px 1px, 1px 1px;
   font-size: 5rem;
 }
-
 
 .flexContainerButtonHome {
   display: flex;

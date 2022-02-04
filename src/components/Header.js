@@ -1,7 +1,8 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Outlet, useLocation } from 'react-router-dom';
 import HeaderButton from './HeaderButton';
+import Nameplate from './Nameplate';
 
 const Header = () => {
   const loc = useLocation().pathname;
@@ -9,41 +10,34 @@ const Header = () => {
     if (pathname === '/') return 'notHeader';
     return 'header';
   };
-  const para = (isHeader) => {
-    if (isHeader === 'header') {
-      return null;
-    }
-    return (
-      <>
-        <h1
-          className="nameHome"
-        >
-          Kat, 22
-        </h1>
-        <p>
-          Heavily influenced by 2014 Tumblr and a shameless enjoyer of most mainstream things
-        </p>
-      </>
-    );
-  };
-  const anim = setAnimate(loc);
+
+  const isHeader = setAnimate(loc);
   return (
-    <motion.div
+    <div
       className="Home"
-      header={anim}
+      isHeader={isHeader}
     >
+
       <motion.div
         className="leftHome"
-        header={anim}
-        animate={anim}
+        animate={isHeader}
       >
-        {para(anim)}
+        <Nameplate isHeader={isHeader} />
       </motion.div>
-      <HeaderButton
-        anim={anim}
-      />
+
+      <motion.div
+        layout
+        className="rightHome"
+        isHeader={isHeader}
+      >
+        <HeaderButton
+          isHeader={isHeader}
+        />
+      </motion.div>
+
       <Outlet />
-    </motion.div>
+
+    </div>
   );
 };
 export default Header;
