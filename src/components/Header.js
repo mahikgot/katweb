@@ -4,39 +4,34 @@ import { Outlet, useLocation } from 'react-router-dom';
 import HeaderButton from './HeaderButton';
 import Nameplate from './Nameplate';
 import Logo from './Logo';
+import { setAnimate } from '../util/helper';
 
 const Header = () => {
   const loc = useLocation().pathname;
-  const setAnimate = (pathname) => {
-    if (pathname === '/') return 'notHeader';
-    return 'header';
-  };
-
-  const isHeader = setAnimate(loc);
   return (
     <div
       className="Home"
-      isheader={isHeader}
+      loc={loc}
     >
 
       <motion.div
         className="leftHome"
-        animate={isHeader}
+        animate={setAnimate({ loc })}
       >
         <Nameplate
-          isHeader={isHeader}
+          loc={loc}
         />
       </motion.div>
       <Logo
-        isHeader={isHeader}
+        loc={loc}
       />
       <motion.div
         layout
         className="navButtons"
-        isheader={isHeader}
+        loc={loc}
       >
         <HeaderButton
-          isHeader={isHeader}
+          loc={loc}
         />
       </motion.div>
 

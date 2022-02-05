@@ -2,21 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { setAnimate } from '../util/helper';
 
-const HeaderButton = ({ isHeader }) => {
+const HeaderButton = ({ loc }) => {
   HeaderButton.propTypes = {
-    isHeader: PropTypes.string.isRequired,
+    loc: PropTypes.string.isRequired,
   };
   const flexVariants = {
     header: { scale: 0.6 },
     notHeader: { scale: 0.9 },
   };
-
   return (
 
     <motion.div
       className="flexContainerButtonHome"
-      animate={isHeader}
+      animate={setAnimate({ loc })}
       variants={flexVariants}
     >
 

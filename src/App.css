@@ -15,25 +15,28 @@ html {
 
 .Home {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
-.Home[isheader='header'] {
+.Home:not([loc='/']) {
   grid-template-columns: 10rem 10rem 1fr 10rem 10rem;
 }
 
 .leftHome {
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 50%;
+  grid-template-columns: fit-content(35rem);
+  justify-content: right;
 }
 .leftHomeItem {
-  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navButtons {
   margin: auto;
 }
-.navButtons[isheader='header'] {
+.navButtons:not([loc='/']) {
   grid-column: 4;
   margin: 0;
 }
@@ -43,9 +46,10 @@ html {
   font-weight: bolder;
   color: #F285AC;
   text-align: left;
-  line-height: 5rem;
+  line-height: 1rem;
   text-shadow: -1px 1px, 1px 1px;
   font-size: 5rem;
+  align-self: center;
 }
 
 .descHome {
@@ -84,5 +88,5 @@ p {
   font-size: 1.5rem;
   letter-spacing: 0.15rem;
   color: #474747;
-  text-align: left;
+  text-align: justify;
 }

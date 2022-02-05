@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Nameplate = ({ isHeader }) => {
+const Nameplate = ({ loc }) => {
   Nameplate.propTypes = {
-    isHeader: PropTypes.string.isRequired,
+    loc: PropTypes.string.isRequired,
   };
-  if (isHeader === 'header') {
+  if (loc !== '/') {
     return null;
   }
   return (

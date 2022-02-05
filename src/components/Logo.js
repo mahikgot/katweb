@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import logo from '../tite.svg';
 
-const Logo = ({ isHeader }) => {
+const Logo = ({ loc }) => {
   Logo.propTypes = {
-    isHeader: PropTypes.string.isRequired,
+    loc: PropTypes.string.isRequired,
   };
-  if (isHeader === 'notHeader') {
+  if (loc === '/') {
     return null;
   }
   return (
