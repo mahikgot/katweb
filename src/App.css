@@ -18,7 +18,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 .Home:not([loc='/']) {
-  grid-template-columns: 5% 5% 1fr 5% 5%;
+  grid-template-columns: 5% minmax(50px, 5%) 1fr 10% 5%;
 }
 
 .leftHome {
