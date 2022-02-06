@@ -18,19 +18,34 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 .Home:not([loc='/']) {
-  grid-template-columns: 10rem 10rem 1fr 10rem 10rem;
+  grid-template-columns: 5% 5% 1fr 5% 5%;
 }
 
 .leftHome {
   margin: auto;
   display: grid;
-  grid-template-columns: fit-content(35rem);
-  justify-content: right;
+  grid-template-columns: fit-content(50%);
+  justify-content: center;
 }
 .leftHomeItem {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.descHome {
+  margin: 0;
+  align-self: center;
+}
+
+.nameHome {
+  font-family:'Inconsolata', monospace;
+  font-weight: bolder;
+  color: #F285AC;
+  text-align: left;
+  text-shadow: -1px 1px, 1px 1px;
+  font-size: 5rem;
+  margin: 1rem 0;
+  align-self: flex-start;
 }
 
 .navButtons {
@@ -39,23 +54,6 @@ html {
 .navButtons:not([loc='/']) {
   grid-column: 4;
   margin: 0;
-}
-
-.nameHome {
-  font-family:'Inconsolata', monospace;
-  font-weight: bolder;
-  color: #F285AC;
-  text-align: left;
-  line-height: 1rem;
-  text-shadow: -1px 1px, 1px 1px;
-  font-size: 5rem;
-  align-self: center;
-}
-
-.descHome {
-  max-width: 80%;
-  position: relative;
-  bottom: 2rem;
 }
 
 .logo {
@@ -88,5 +86,5 @@ p {
   font-size: 1.5rem;
   letter-spacing: 0.15rem;
   color: #474747;
-  text-align: justify;
+  text-align: left;
 }
