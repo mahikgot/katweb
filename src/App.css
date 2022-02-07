@@ -42,8 +42,7 @@ html {
   font-weight: bolder;
   color: #F285AC;
   text-align: left;
-  text-shadow: -1px 1px, 1px 1px;
-  font-size: 5rem;
+  font-size: calc(100% + 4vw);
   margin: 1rem 0;
   align-self: flex-start;
 }
@@ -74,17 +73,17 @@ button {
   border: none;
   color: white;
   text-align: center;
-  font-size: 1.5rem;
+  font-size:  calc(100% + 0.5vw);
   cursor: pointer;
   padding: 1rem 1.5rem;
-  width: 10rem;
+  width: calc(8rem + 2vw);
   margin:0.5rem;
 }
 
 p {
   font-family:'Inconsolata', monospace;
-  font-size: 1.5rem;
   letter-spacing: 0.15rem;
   color: #474747;
   text-align: left;
+  font-size: calc(100% + 0.5vw);
 }
