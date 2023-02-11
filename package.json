@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "/resume.markguiang.dev/kat",
+  "homepage": "/kat",
   "eslintConfig": {
     "extends": [
       "react-app",
